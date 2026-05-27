@@ -1,0 +1,12 @@
+$font-family: "Fira Sans", sans-serif;
+$second-family: "Wix Madefor Display", sans-serif;
+
+$black: #111;
+$pink: #ff4cff;
+$white: #fff;
+:root {
+  // base
+  --content-width: 1280px;
+  --container-offset: 20px;
+  --container-width: var(--content-width);
+}

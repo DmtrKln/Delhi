@@ -1,0 +1,65 @@
+/*Fira Sans*/
+@font-face {
+  font-family: "Fira Sans";
+  src: local("Fira Sans ExtraLight"), local("FiraSans-ExtraLight"),
+    url("../fonts/FiraSans-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: local("Fira Sans Light"), local("FiraSans-Light"),
+    url("../fonts/FiraSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: local("Fira Sans Regular"), local("FiraSans-Regular"),
+    url("../fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: local("Fira Sans Medium"), local("FiraSans-Medium"),
+    url("../fonts/FiraSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: local("Fira Sans SemiBold"), local("FiraSans-SemiBold"),
+    url("../fonts/FiraSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: local("Fira Sans Bold"), local("FiraSans-Bold"),
+    url("../fonts/FiraSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*Wix Madefor Display*/
+
+@font-face {
+  font-family: "Wix Madefor Display";
+  src: local("Wix Madefor Display Medium"), local("WixMadeforDisplay-Medium"),
+    url("../fonts/WixMadeforDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

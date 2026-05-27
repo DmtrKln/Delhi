@@ -1,0 +1,261 @@
+.hero {
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 260px 0 320px 0;
+
+    h1 {
+      font-family: $font-family;
+      font-weight: 600;
+      font-size: 90px;
+      color: $white;
+    }
+
+    p {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 60px;
+      color: $white;
+    }
+
+    a {
+      display: block;
+      width: fit-content;
+      font-family: $font-family;
+      color: $white;
+      padding: 15px 60px;
+      background-color: $pink;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: $white;
+        color: $pink;
+      }
+
+      &:active {
+        background-color: #646464;
+        color: $white;
+      }
+    }
+  }
+}
+
+.about {
+  padding: 100px 0 120px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+  }
+
+  &__desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      width: calc(40% - 20px);
+      max-height: 490px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: calc(60% - 20px);
+
+    h2 {
+      font-family: $font-family;
+      color: $white;
+      font-weight: 400;
+      font-size: 40px;
+    }
+
+    p {
+      font-family: $font-family;
+      color: $white;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 150%;
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    h3 {
+      font-family: $font-family;
+      color: $white;
+      font-weight: 400;
+      font-size: 40px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__card {
+    width: calc((100% - 80px)/3);
+    padding: 20px 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 5px 9px 7px 0 rgba(0, 0, 0, 0.25);
+    background: $black;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+  }
+
+  &__cardDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h4 {
+      font-family: $font-family;
+      color: $white;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 150%;
+    }
+
+    p {
+      font-family: $font-family;
+      color: $white;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 150%;
+    }
+  }
+
+}
+
+.bid {
+  padding: 120px 0 120px 0;
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+    h3 {
+      max-width: 870px;
+      font-family: $font-family;
+      color: $white;
+      font-weight: 600;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    a {
+      padding: 15px 80px;
+      border-radius: 15px;
+      font-family: $font-family;
+      color: $black;
+      font-weight: 400;
+      font-size: 22px;
+      text-align: center;
+      background-color: $white;
+    }
+  }
+}
+
+.reservation {
+
+  padding: 115px 0 115px 0;
+
+  &__map {
+    h3 {
+      font-family: $font-family;
+      color: $white;
+      font-weight: 400;
+      font-size: 40px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 65px;
+
+  }
+
+  &__left {
+    width: calc(50% - 65px);
+
+    h3 {
+      font-family: $font-family;
+      color: $white;
+      font-weight: 400;
+      font-size: 40px;
+    }
+  }
+
+  iframe {
+    width: calc(50% - 65px);
+    max-height: 580px;
+    border-radius: 15px;
+  }
+
+  &__group {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+
+    svg{
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 999;
+    }
+  }
+
+  &__label {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 22px;
+    color: $white
+  }
+
+  &__input {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    background-color: transparent;
+    padding: 10px 15px;
+    outline: none;
+    position: relative;
+
+  }
+
+  &__input::placeholder {
+    font-family: $font-family;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 16px;
+
+  }
+}
