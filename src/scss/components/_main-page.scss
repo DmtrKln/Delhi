@@ -177,31 +177,41 @@
 
   padding: 115px 0 115px 0;
 
-  &__map {
-    h3 {
-      font-family: $font-family;
-      color: $white;
-      font-weight: 400;
-      font-size: 40px;
-    }
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    gap: 115px
   }
 
-  &__bottom {
+
+  &__topTitle {
+    font-family: $font-family;
+    color: $white;
+    font-weight: 400;
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  &__inner {
     display: flex;
     justify-content: space-between;
     gap: 65px;
+    margin-bottom: 30px;
 
+  }
+
+  &__btn {
+    border-radius: 15px;
+    padding: 11px 85px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    background-color: $white;
   }
 
   &__left {
     width: calc(50% - 65px);
 
-    h3 {
-      font-family: $font-family;
-      color: $white;
-      font-weight: 400;
-      font-size: 40px;
-    }
   }
 
   iframe {
@@ -225,8 +235,9 @@
   &__field {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 
-    svg{
+    svg {
       position: absolute;
       right: 0;
       top: 0;
@@ -256,6 +267,84 @@
     color: rgba(255, 255, 255, 0.5);
     font-weight: 400;
     font-size: 16px;
-
   }
+
+  textarea {
+    padding: 10px 15px;
+    height: 144px;
+    font-family: $font-family;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__reviewsTitle {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h3 {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 40px;
+      color: $white;
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    width: 75px;
+    justify-content: space-between;
+  }
+
+  &__arrowLeft,
+  &__arrowRight{
+    cursor: pointer;
+  }
+
+  &__card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 20px 45px 60px 20px;
+  }
+
+  &__cardTitle {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__cardLeft {
+    display: flex;
+    gap: 25px;
+    font-family: $font-family;
+    color: #d4d4d4;
+    font-weight: 275;
+    font-size: 16px;
+  }
+
+  &__stars {
+    width: 140px;
+    display: flex;
+    gap: 5px;
+  }
+
+  &__cardDesc {
+    h4 {
+      font-family: $font-family;
+      color: $white;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-family: $font-family;
+      font-weight: 275;
+      font-size: 16px;
+      color: #d4d4d4;
+    }
+  }
+
 }
