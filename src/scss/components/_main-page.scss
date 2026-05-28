@@ -1,15 +1,23 @@
 .hero {
+  padding: 260px 0 320px 0;
+
+  @include mobile {
+    padding: 200px 0 165px 0;
+  }
+
   &__wrapp {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 260px 0 320px 0;
 
     h1 {
       font-family: $font-family;
       font-weight: 600;
       font-size: 90px;
       color: $white;
+
+      @include mobile {
+        font-size: 40px;
+      }
     }
 
     p {
@@ -17,6 +25,11 @@
       font-weight: 400;
       font-size: 60px;
       color: $white;
+      margin-bottom: 20px;
+
+      @include mobile {
+        font-size: 26px;
+      }
     }
 
     a {
@@ -24,6 +37,8 @@
       width: fit-content;
       font-family: $font-family;
       color: $white;
+      font-weight: 400;
+      font-size: 19px;
       padding: 15px 60px;
       background-color: $pink;
       border-radius: 8px;
@@ -37,6 +52,8 @@
         background-color: #646464;
         color: $white;
       }
+
+      @include mobile {}
     }
   }
 }
@@ -46,10 +63,18 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include mobile {
+    padding: 60px 0 60px 0;
+  }
+
   &__wrapp {
     display: flex;
     flex-direction: column;
     gap: 120px;
+
+    @include mobile {
+      gap: 60px;
+    }
   }
 
   &__desc {
@@ -59,32 +84,61 @@
     align-items: center;
     gap: 20px;
 
-    img {
-      width: calc(40% - 20px);
-      max-height: 490px;
-    }
-  }
-
-  &__left {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    width: calc(60% - 20px);
-
     h2 {
       font-family: $font-family;
       color: $white;
       font-weight: 400;
       font-size: 40px;
+
+      @include tablet {
+        font-size: 26px;
+      }
+    }
+
+  }
+
+  &__descButton {
+    display: flex;
+    gap: 20px;
+
+    @include desktop {
+      flex-direction: column;
     }
 
     p {
+      width: calc(60% - 20px);
       font-family: $font-family;
       color: $white;
       font-weight: 300;
       font-size: 24px;
       line-height: 150%;
+
+      @include maxdesktop {
+        width: 100%;
+      }
+
+      @include desktop {
+        order: 2;
+      }
+
+      @include mobile {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+      }
     }
+
+    img {
+      width: calc(40% - 20px);
+      max-height: 490px;
+
+      @include desktop {
+        width: 100%;
+        height: 100%;
+        order: 1;
+      }
+    }
+
   }
 
   &__advantages {
@@ -92,21 +146,31 @@
     flex-direction: column;
     gap: 40px;
 
+    @include mobile {
+      gap: 50px;
+
+    }
+
     h3 {
       font-family: $font-family;
       color: $white;
       font-weight: 400;
       font-size: 40px;
+
+      @include mobile {
+        font-size: 26px;
+      }
     }
   }
 
   &__cards {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
   }
 
   &__card {
-    width: calc((100% - 80px)/3);
+    width: calc((100% - 80px)/ 3);
     padding: 20px 10px;
     border-radius: 15px;
     display: flex;
@@ -116,6 +180,14 @@
     background: $black;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
+
+    @include tablet {
+      width: calc((100% - 40px)/2);
+    }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__cardDesc {
@@ -145,6 +217,10 @@
 .bid {
   padding: 120px 0 120px 0;
 
+  @include mobile {
+    padding: 120px 0 140px 0;
+  }
+
   &__wrapp {
     display: flex;
     flex-direction: column;
@@ -158,6 +234,10 @@
       font-weight: 600;
       font-size: 30px;
       text-align: center;
+
+      @include mobile {
+        font-size: 18px;
+      }
     }
 
     a {
@@ -169,6 +249,11 @@
       font-size: 22px;
       text-align: center;
       background-color: $white;
+
+      @include mobile {
+        font-size: 16px;
+        padding: 17px 100px;
+      }
     }
   }
 }
@@ -177,10 +262,18 @@
 
   padding: 115px 0 115px 0;
 
+  @include mobile {
+    padding: 60px 0 60px 0;
+  }
+
   &__wrapp {
     display: flex;
     flex-direction: column;
-    gap: 115px
+    gap: 115px;
+
+    @include mobile {
+      gap: 60px;
+    }
   }
 
 
@@ -189,7 +282,11 @@
     color: $white;
     font-weight: 400;
     font-size: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+
+    @include mobile {
+      font-size: 26px;
+    }
   }
 
   &__inner {
@@ -197,6 +294,11 @@
     justify-content: space-between;
     gap: 65px;
     margin-bottom: 30px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 20px;
+    }
 
   }
 
@@ -207,10 +309,15 @@
     font-weight: 400;
     font-size: 18px;
     background-color: $white;
+    padding: 11px 115px;
   }
 
   &__left {
     width: calc(50% - 65px);
+
+    @include tablet {
+      width: 100%;
+    }
 
   }
 
@@ -218,6 +325,11 @@
     width: calc(50% - 65px);
     max-height: 580px;
     border-radius: 15px;
+    max-height: 320px;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__group {
@@ -249,7 +361,11 @@
     font-family: $font-family;
     font-weight: 400;
     font-size: 22px;
-    color: $white
+    color: $white;
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   &__input {
@@ -259,6 +375,14 @@
     padding: 10px 15px;
     outline: none;
     position: relative;
+    font-family: $font-family;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    font-size: 16px;
+
+    @include mobile {
+      font-size: 14px;
+    }
 
   }
 
@@ -267,6 +391,11 @@
     color: rgba(255, 255, 255, 0.5);
     font-weight: 400;
     font-size: 16px;
+
+    @include mobile {
+      font-size: 14px;
+    }
+
   }
 
   textarea {
@@ -290,6 +419,10 @@
       font-weight: 400;
       font-size: 40px;
       color: $white;
+
+      @include mobile {
+        font-size: 26px;
+      }
     }
   }
 
@@ -300,7 +433,7 @@
   }
 
   &__arrowLeft,
-  &__arrowRight{
+  &__arrowRight {
     cursor: pointer;
   }
 

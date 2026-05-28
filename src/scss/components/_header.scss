@@ -37,7 +37,7 @@
     justify-self: center;
     width: 100%;
 
-    @include tablet {
+    @include maxdesktop {
       display: none;
     }
   }
@@ -67,6 +67,10 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @include maxdesktop {
+      display: none;
+    }
   }
 
   &__social {
@@ -79,6 +83,10 @@
 
     a:hover path {
       fill: $pink;
+    }
+
+    @include maxdesktop {
+      display: none;
     }
   }
 
@@ -108,4 +116,6 @@
       color: $white;
     }
   }
+
+ 
 }
