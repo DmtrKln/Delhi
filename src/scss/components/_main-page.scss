@@ -1,5 +1,6 @@
 .hero {
   padding: 260px 0 320px 0;
+  background-size: cover;
 
   @include mobile {
     padding: 200px 0 165px 0;
@@ -26,6 +27,7 @@
       font-size: 60px;
       color: $white;
       margin-bottom: 20px;
+      line-height: 120%;
 
       @include mobile {
         font-size: 26px;
@@ -292,6 +294,8 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 65px;
     margin-bottom: 30px;
 
@@ -310,12 +314,19 @@
     font-size: 18px;
     background-color: $white;
     padding: 11px 115px;
+    width: fit-content;
+
+    @include tablet {
+      order: 2;
+
+    }
   }
 
   &__left {
     width: calc(50% - 65px);
 
     @include tablet {
+      order: 1;
       width: 100%;
     }
 
@@ -323,11 +334,11 @@
 
   iframe {
     width: calc(50% - 65px);
-    max-height: 580px;
+    max-height: 582px;
     border-radius: 15px;
-    max-height: 320px;
 
     @include tablet {
+      order: 3;
       width: 100%;
     }
   }
@@ -388,9 +399,9 @@
 
   &__input::placeholder {
     font-family: $font-family;
-    color: rgba(255, 255, 255, 0.5);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 22px;
+    color: $white;
 
     @include mobile {
       font-size: 14px;
@@ -402,9 +413,9 @@
     padding: 10px 15px;
     height: 144px;
     font-family: $font-family;
-    color: rgba(255, 255, 255, 0.5);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 22px;
+    color: $white;
   }
 
   &__reviewsTitle {
@@ -445,22 +456,28 @@
 
   &__cardTitle {
     display: flex;
-    justify-content: space-between;
   }
 
-  &__cardLeft {
+  &__cardRight {
     display: flex;
-    gap: 25px;
+    justify-content: space-between;
+    gap: 15px;
     font-family: $font-family;
     color: #d4d4d4;
     font-weight: 275;
     font-size: 16px;
+    width: 100%;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__stars {
     width: 140px;
     display: flex;
     gap: 5px;
+    margin-right: 25px;
   }
 
   &__cardDesc {
