@@ -105,46 +105,62 @@
     </div>
   </div>
 </header>
+<div class="contactUs__overlay">
+  <div class="contactUs">
 
-<section class="contactUs">
-  <div class="contactUs__wrapp">
-    <div class="contactUs__form">
-      <div class="contactUs__formTitle">
-        <h2>
-          Связаться с нами
-        </h2>
-        <a href="#" class="contactUs__cross"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.625 0.625L20.625 20.625M20.625 0.625L0.625 20.625" stroke="white" stroke-opacity="0.8"
-              stroke-width="1.25" stroke-linecap="round" />
-          </svg></a>
-        <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
-      </div>
-      <form action="">
-        <div class="contactUs__form">
-          <div class="contactUs__group">
-            <div class="contactUs__field">
-              <label for="name" class="contactUs__label">Имя</label>
-              <input type="text" class="contactUs__input" placeholder="Ваше имя" requierd />
-            </div>
-            <div class="contactUs__field">
-              <label for="name" class="contactUs__label">Телефон</label>
-              <input type="text" class="contactUs__input" placeholder="+7 (___) ___-__-__" requierd />
-            </div>
-          </div>
-          <div class="contactUs__field">
-            <label for="name" class="contactUs__label">Email</label>
-            <input type="email" class="contactUs__input" placeholder="name@company.ru" requierd />
-          </div>
-          <div class="contactUs__field">
-            <label for="tel" class="contactUs__label">Сообщение</label>
-            <textarea type="text" class="contactUs__input" placeholder="Ваш вопрос" requierd></textarea>
-          </div>
+    <div class="contactUs__wrapp">
+      <div class="contactUs__form">
+        <div class="contactUs__formTitle">
+          <h2>
+            Связаться с нами
+          </h2>
+          <a href="#" class="contactUs__cross"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.625 0.625L20.625 20.625M20.625 0.625L0.625 20.625" stroke="white" stroke-opacity="0.8"
+                stroke-width="1.25" stroke-linecap="round" />
+            </svg></a>
+          <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
         </div>
-      </form>
-      <button class="btn-reset">
-        Отправить
-      </button>
+        <form action="">
+          <div class="contactUs__form">
+            <div class="contactUs__group">
+              <div class="contactUs__field">
+                <label for="name" class="contactUs__label">Имя</label>
+                <input type="text" class="contactUs__input" placeholder="Ваше имя" required />
+              </div>
+              <div class="contactUs__field">
+                <label for="name" class="contactUs__label">Телефон</label>
+                <input type="text" class="contactUs__input" placeholder="+7 (___) ___-__-__" required />
+              </div>
+            </div>
+            <div class="contactUs__field">
+              <label for="name" class="contactUs__label">Email</label>
+              <input type="email" class="contactUs__input" placeholder="name@company.ru" required />
+            </div>
+            <div class="contactUs__field">
+              <label for="tel" class="contactUs__label">Сообщение</label>
+              <textarea type="text" class="contactUs__input" placeholder="Ваш вопрос" required></textarea>
+            </div>
+          </div>
+        </form>
+        <button class="contactUs__btn btn-reset">
+          Отправить
+        </button>
+      </div>
     </div>
   </div>
-</section>
+</div>
+<div class="success_overlay">
+  <div class="success">
+    <div class="success__wrapp">
+      <img src="img/icons/logo.svg" alt="">
+      <svg class="success__cross" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M24.7599 24.7599L12.76 12.76M12.76 12.76L0.76001 0.76001M12.76 12.76L24.76 0.76001M12.76 12.76L0.76001 24.76"
+          stroke="white" stroke-width="1.52" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <h2>ЗАЯВКА УСПЕШНО
+        ОТПРАВЛЕНА</h2>
+    </div>
+  </div>
+</div>

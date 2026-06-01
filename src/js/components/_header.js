@@ -16,13 +16,11 @@ if (header) {
   })
 }
 
-//бургер
-function toggleBurger() {
+burger.addEventListener('click', () => {
   burgerIcon.classList.toggle('active');
   mobileMenu.classList.toggle('active');
-}
-
-burger.addEventListener('click', toggleBurger);
+  document.querySelector('html').classList.toggle('hidden');
+});
 
 
 
@@ -30,13 +28,39 @@ burger.addEventListener('click', toggleBurger);
 const headerBtn = document.querySelector('.header__btn');
 const headerBtnMobile = document.querySelector('.header__tellMobile');
 const contactUs = document.querySelector('.contactUs');
+const cross = document.querySelector('.contactUs__cross');
+const contactUsOverlay = document.querySelector('.contactUs__overlay');
+
+[headerBtn, headerBtnMobile, cross].forEach(btn => {
+  btn?.addEventListener('click', () => {
+    contactUs.classList.toggle('active');
+    contactUsOverlay.classList.toggle('active');
+  })
+})
+
+//   contactUsOverlay.addEventListener('click', () => {
+//   contactUs.classList.remove('active');
+//   contactUsOverlay.classList.remove('active');
+// });
+
+
+//отправить
+
+const contactUsBtn = document.querySelector('.contactUs__btn');
+const success = document.querySelector('.success')
+const overlaySucces = document.querySelector('.success__overlay');
+const crossSucces = document.querySelector('.success__cross');
 
 
 
-function toggleContactUs() {
-  contactUs.classList.toggle('active');
-}
+[contactUsBtn, crossSucces].forEach(btn => {
+  btn?.addEventListener('click', () => {
+    success.classList.toggle('active');
+    overlaySucces.classList.toggle('active');
+  })
+})
 
-headerBtn.addEventListener('click', toggleContactUs);
-headerBtnMobile.addEventListener('click', toggleContactUs)
-cross.addEventListener('click', toggleContactUs);
+//   contactUsOverlay.addEventListener('click', () => {
+//   success.classList.remove('active');
+//   overlaySucces.classList.remove('active');
+// });
