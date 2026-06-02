@@ -19,7 +19,7 @@ if (header) {
 burger.addEventListener('click', () => {
   burgerIcon.classList.toggle('active');
   mobileMenu.classList.toggle('active');
-  document.querySelector('html').classList.toggle('hidden');
+  document.querySelector('body').classList.toggle('overflow');
 });
 
 
@@ -35,32 +35,40 @@ const contactUsOverlay = document.querySelector('.contactUs__overlay');
   btn?.addEventListener('click', () => {
     contactUs.classList.toggle('active');
     contactUsOverlay.classList.toggle('active');
+    document.querySelector('body').classList.toggle('overflow');
   })
 })
 
-//   contactUsOverlay.addEventListener('click', () => {
-//   contactUs.classList.remove('active');
-//   contactUsOverlay.classList.remove('active');
-// });
+contactUsOverlay?.addEventListener('click', (e) =>{
+  if(e.target === contactUsOverlay){
+    contactUs.classList.remove('active');
+    contactUsOverlay.classList.remove('active');
+    document.querySelector('body').classList.remove('overflow');
+  }
+})
 
 
 //отправить
 
-const contactUsBtn = document.querySelector('.contactUs__btn');
-const success = document.querySelector('.success')
-const overlaySucces = document.querySelector('.success__overlay');
-const crossSucces = document.querySelector('.success__cross');
+// const contactUsBtn = document.querySelector('.contactUs__btn');
+// const success = document.querySelector('.success')
+// const overlaySucces = document.querySelector('.success__overlay');
+// const crossSucces = document.querySelector('.success__cross');
 
 
 
-[contactUsBtn, crossSucces].forEach(btn => {
-  btn?.addEventListener('click', () => {
-    success.classList.toggle('active');
-    overlaySucces.classList.toggle('active');
-  })
-})
+// [contactUsBtn, crossSucces].forEach(btn => {
+//   btn?.addEventListener('click', () => {
+//     success.classList.toggle('active');
+//     overlaySucces.classList.toggle('active');
+//     document.querySelector('body').classList.toggle('overflow');
+//   })
+// })
 
-//   contactUsOverlay.addEventListener('click', () => {
-//   success.classList.remove('active');
-//   overlaySucces.classList.remove('active');
+// overlaySucces?.addEventListener('click', (e) => {
+//   if (e.target === overlaySucces) {
+//     success.classList.remove('active');
+//     overlaySucces.classList.remove('active');
+//     document.querySelector('body').classList.remove('overflow');
+//   }
 // });

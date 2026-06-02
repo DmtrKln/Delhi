@@ -22,8 +22,8 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
-    @include mobile{
+
+    @include mobile {
       margin-bottom: 15px;
     }
 
@@ -39,6 +39,12 @@
       color: $white;
       font-weight: 400;
       font-size: 20px;
+
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $pink;
+      }
     }
   }
 
@@ -53,13 +59,19 @@
     a:hover path {
       fill: $pink;
     }
+
+    transition: all 0.3s ease;
+
+    a:hover {
+      color: $pink;
+    }
   }
 
   &__nav {
     display: flex;
     flex-direction: column;
 
-    @include mobile{
+    @include mobile {
       margin-bottom: 10px;
     }
 
@@ -73,6 +85,12 @@
         color: $white;
         font-weight: 400;
         font-size: 20px;
+
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: $pink;
+        }
       }
 
     }
@@ -89,6 +107,12 @@
       font-weight: 500;
       font-size: 18px;
       line-height: 120%;
+
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $pink;
+      }
 
       @include mobile {
         order: 2;

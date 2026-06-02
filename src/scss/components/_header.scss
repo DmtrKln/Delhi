@@ -66,7 +66,13 @@
         color: $white;
         text-decoration: none;
         white-space: nowrap;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: $pink;
+        }
       }
+
     }
   }
 
@@ -108,6 +114,11 @@
     font-weight: 600;
     font-size: 18px;
     color: $white;
+    transition: all 0.3s ease;
+
+    &:hover{
+      color: $pink;
+    }
   }
 
   &__btn {
@@ -118,6 +129,7 @@
     font-size: 16px;
     background-color: $pink;
     border-radius: 10px;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: $white;
@@ -240,6 +252,17 @@
     color: $white;
     background-color: $pink;
     border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $white;
+      color: $pink;
+    }
+
+    &:active {
+      background-color: #646464;
+      color: $white;
+    }
   }
 
   &__mobileContact {
@@ -346,6 +369,17 @@
       color: $white;
       padding: 17px 0;
       border-radius: 14px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $white;
+        color: $pink;
+      }
+
+      &:active {
+        background-color: #646464;
+        color: $white;
+      }
     }
   }
 
@@ -515,7 +549,7 @@
     top: 35px;
     right: 40px;
 
-    @include mobile{
+    @include mobile {
       top: 30px;
       right: 30px;
     }

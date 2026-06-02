@@ -18,19 +18,6 @@ const reservationSwiper = new Swiper(".reservation__slider", {
 
   },
 
-  on: {
-    init() {
-      updateProgress(this, ".reservation__progress-line");
-      paintCards();
-    },
 
-    slideChange() {
-      updateProgress(this, ".reservation__progress-line");
-    },
-
-    resize() {
-      updateProgress(this, ".reservation__progress-line");
-    },
-  },
 });
 

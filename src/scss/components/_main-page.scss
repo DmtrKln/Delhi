@@ -25,7 +25,7 @@
       }
     }
 
-    p {
+    h2 {
       font-family: $font-family;
       font-weight: 400;
       font-size: 60px;
@@ -48,6 +48,7 @@
       padding: 15px 60px;
       background-color: $pink;
       border-radius: 8px;
+      transition: all 0.3s ease;
 
       &:hover {
         background-color: $white;
@@ -59,7 +60,6 @@
         color: $white;
       }
 
-      @include mobile {}
     }
   }
 }
@@ -92,7 +92,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 35px;
 
     h2 {
       font-family: $font-family;
@@ -115,6 +115,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    transition: all 0.3s ease;
 
     @include desktop {
       flex-direction: column;
@@ -143,7 +145,7 @@
       }
     }
 
-    img {
+    video {
       width: calc(40% - 20px);
       max-height: 490px;
       border-radius: 15px;
@@ -152,6 +154,10 @@
         width: 100%;
         height: 100%;
         order: 1;
+      }
+
+      @include mobile{
+        max-height: 345px;
       }
     }
 
@@ -212,6 +218,7 @@
     @include mobile {
       padding: 20px 10px 50px 10px;
       width: 100%;
+      gap: 20px;
     }
 
     img {
@@ -268,7 +275,11 @@
     gap: 30px;
     align-items: center;
 
-    h3 {
+    @include mobile{
+      gap: 20px;
+    }
+
+    p {
       max-width: 870px;
       font-family: $font-family;
       color: $white;
@@ -291,9 +302,23 @@
       text-align: center;
       background-color: $white;
 
+
+      transition: all 0.3s ease;
+
       @include mobile {
         font-size: 16px;
         padding: 17px 100px;
+      }
+
+      &:hover {
+        background-color: $white;
+        background-color: $pink;
+        color: $white;
+      }
+
+      &:active {
+        background-color: #646464;
+        color: $white;
       }
     }
   }
@@ -327,9 +352,10 @@
     color: $white;
     font-weight: 400;
     font-size: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     @include mobile {
+      margin-bottom: 30px;
       font-size: 26px;
     }
   }
@@ -358,10 +384,21 @@
     background-color: $white;
     padding: 11px 115px;
     width: fit-content;
+    transition: all 0.3s ease;
 
     @include tablet {
       width: 100%;
       order: 2;
+    }
+
+    &:hover {
+      background-color: $pink;
+      color: $white;
+    }
+
+    &:active {
+      background-color: #646464;
+      color: $white;
     }
   }
 
@@ -384,6 +421,9 @@
       order: 3;
       width: 100%;
     }
+    @include mobile{
+      height: 310px;
+    }
   }
 
   &__group {
@@ -403,6 +443,15 @@
   }
 
   &__fieldDate,
+  &__fieldTime {
+    width: calc(50% - 20px);
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__fieldDate,
   &__fieldTime,
   &__field {
     display: flex;
@@ -413,8 +462,9 @@
     svg {
       position: absolute;
       right: 15px;
-      top: 50px;
+      top: 55px;
       z-index: 999;
+      pointer-events: none;
 
       @include mobile {
         right: 12px;
@@ -435,6 +485,7 @@
   }
 
   &__input {
+
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     background-color: transparent;
@@ -451,6 +502,14 @@
       font-size: 14px;
     }
 
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      width: 40px;
+      height: 100%;
+    }
   }
 
   &__svg {
@@ -463,7 +522,7 @@
     font-family: $font-family;
     font-weight: 400;
     font-size: 22px;
-    color: $white;
+    color: rgba(255, 255, 255, 0.5);
 
     @include mobile {
       font-size: 14px;
@@ -477,7 +536,7 @@
     font-family: $font-family;
     font-weight: 400;
     font-size: 22px;
-    color: $white;
+    color: rgba(255, 255, 255, 0.5);
   }
 
   &__reviewsTitle {
@@ -503,6 +562,15 @@
     display: flex;
     width: 75px;
     justify-content: space-between;
+
+    @include mobile {
+
+      width: 60px;
+
+      svg {
+        width: 22px;
+      }
+    }
   }
 
   &__arrowLeft,
