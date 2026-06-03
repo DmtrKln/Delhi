@@ -36,6 +36,7 @@ const contactUsOverlay = document.querySelector('.contactUs__overlay');
     contactUs.classList.toggle('active');
     contactUsOverlay.classList.toggle('active');
     document.querySelector('body').classList.toggle('overflow');
+    header.style.zIndex = '0';
   })
 })
 
@@ -44,6 +45,7 @@ contactUsOverlay?.addEventListener('click', (e) =>{
     contactUs.classList.remove('active');
     contactUsOverlay.classList.remove('active');
     document.querySelector('body').classList.remove('overflow');
+    header.style.zIndex = '';
   }
 })
 

@@ -217,7 +217,7 @@ const resources = () => {
 }
 
 const images = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`])
+  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg,mp4}`])
     .pipe(gulpif(isProd, image([
       image.mozjpeg({
         quality: 80,
