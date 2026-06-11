@@ -8,10 +8,6 @@
     flex-wrap: wrap;
     gap: 20px;
 
-    img {
-      width: 155px;
-      height: 50px;
-    }
 
     @include mobile {
       gap: 25px;
@@ -97,9 +93,16 @@
 
   }
 
+  &__wrapMeta{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
   &__meta {
     display: flex;
     flex-direction: column;
+    gap: 36px;
 
     a {
       font-family: $font-family;
@@ -113,7 +116,7 @@
       &:first-child {
         font-weight: 300;
       }
-    
+
       &:nth-child(2) {
         font-weight: 500;
       }
@@ -127,13 +130,6 @@
       }
     }
 
-    a:nth-child(1) {
-      margin-bottom: 10px;
-    }
-
-    a:nth-child(2) {
-      margin-bottom: 35px;
-    }
 
   }
 
@@ -145,5 +141,9 @@
       margin-bottom: 40px;
       order: 1;
     }
+    a img {
+      width: 100%;
+    }
+
   }
 }

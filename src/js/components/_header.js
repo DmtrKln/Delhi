@@ -1,76 +1,50 @@
 const header = document.querySelector('.header');
-const burger = document.querySelector(".header__burger");
-const burgerIcon = document.querySelector('.header__burgerIcon')
-const SCROLLED_CLASS = "scrolled";
-const mobileMenu = document.querySelector(".header__mobile");
+const burger = document.querySelector('.header__burger');
+const SCROLLED_CLASS = 'scrolled';
+const mobileMenu = document.querySelector('.header__mobile');
 
 // скролл
 if (header) {
   window.addEventListener('scroll', () => {
-    if (window.scrollY >= 10) {
-      header.classList.add(SCROLLED_CLASS);
-    }
-    else {
-      header.classList.remove(SCROLLED_CLASS);
-    }
-  })
+    header.classList.toggle(SCROLLED_CLASS, window.scrollY >= 10);
+  });
 }
 
-burger.addEventListener('click', () => {
-  burgerIcon.classList.toggle('active');
-  mobileMenu.classList.toggle('active');
-  document.querySelector('body').classList.toggle('overflow');
+// бургер
+burger?.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  mobileMenu?.classList.toggle('active');
+  document.body.classList.toggle('overflow');
 });
 
-
-
-//модалка
+// модалка
 const headerBtn = document.querySelector('.header__btn');
-const headerBtnMobile = document.querySelector('.header__tellMobile');
+const headerBtnMobile = document.querySelector('.header__tellMobile'); // сверь с HTML!
 const contactUs = document.querySelector('.contactUs');
 const cross = document.querySelector('.contactUs__cross');
 const contactUsOverlay = document.querySelector('.contactUs__overlay');
+const bidBtn = document.querySelector('.bid__btn');
 
-[headerBtn, headerBtnMobile, cross].forEach(btn => {
-  btn?.addEventListener('click', () => {
-    contactUs.classList.toggle('active');
-    contactUsOverlay.classList.toggle('active');
-    document.querySelector('body').classList.toggle('overflow');
-    header.style.zIndex = '0';
-  })
-})
+function openModal() {
+  contactUs?.classList.add('active');
+  contactUsOverlay?.classList.add('active');
+  document.body.classList.add('overflow');
+  if (header) header.style.zIndex = '0';
+}
 
-contactUsOverlay?.addEventListener('click', (e) =>{
-  if(e.target === contactUsOverlay){
-    contactUs.classList.remove('active');
-    contactUsOverlay.classList.remove('active');
-    document.querySelector('body').classList.remove('overflow');
-    header.style.zIndex = '';
-  }
-})
+function closeModal() {
+  contactUs?.classList.remove('active');
+  contactUsOverlay?.classList.remove('active');
+  document.body.classList.remove('overflow');
+  if (header) header.style.zIndex = '';
+}
 
+[headerBtn, headerBtnMobile, bidBtn].forEach(btn => {
+  btn?.addEventListener('click', openModal);
+});
 
-//отправить
+cross?.addEventListener('click', closeModal);
 
-// const contactUsBtn = document.querySelector('.contactUs__btn');
-// const success = document.querySelector('.success')
-// const overlaySucces = document.querySelector('.success__overlay');
-// const crossSucces = document.querySelector('.success__cross');
-
-
-
-// [contactUsBtn, crossSucces].forEach(btn => {
-//   btn?.addEventListener('click', () => {
-//     success.classList.toggle('active');
-//     overlaySucces.classList.toggle('active');
-//     document.querySelector('body').classList.toggle('overflow');
-//   })
-// })
-
-// overlaySucces?.addEventListener('click', (e) => {
-//   if (e.target === overlaySucces) {
-//     success.classList.remove('active');
-//     overlaySucces.classList.remove('active');
-//     document.querySelector('body').classList.remove('overflow');
-//   }
-// });
+contactUsOverlay?.addEventListener('click', (e) => {
+  if (e.target === contactUsOverlay) closeModal();
+});

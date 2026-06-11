@@ -6,10 +6,10 @@
       </a>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Меню</a></li>
-          <li><a href="#">Контакты</a></li>
-          <li><a href="#">Отзывы</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#about__advantages">Преимущества</a></li>
+          <li><a href="#reservation__inner">Контакты</a></li>
+          <li><a href="#reservation__botton">Отзывы</a></li>
         </ul>
       </nav>
       <div class="header__contact">
@@ -43,21 +43,21 @@
         </div>
         <div class="header__numReserv">
           <a class="header__tell" href="tel:+7-923-765-1130">8-923-765-1130</a>
-          <a class="header__btn btn-reset" href="#">Забронировать</a>
+          <button class="header__btn btn-reset">Забронировать</button>
         </div>
-        <a href="#" class="header__tellMobile"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+        <button class="header__tellMobile btn-reset"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#FE61D1" />
             <path
               d="M13.7796 9.11747C13.5097 8.44256 12.856 8 12.1291 8H9.68412C8.75401 8 8 8.75382 8 9.68394C8 17.5899 14.4092 23.9991 22.3152 23.9991C23.2453 23.9991 23.9991 23.245 23.9991 22.3149L23.9995 19.8695C23.9995 19.1426 23.5571 18.4891 22.8822 18.2191L20.5388 17.2821C19.9326 17.0396 19.2423 17.1487 18.7407 17.5668L18.1359 18.0712C17.4296 18.6598 16.3903 18.6129 15.7402 17.9628L14.0372 16.2583C13.3871 15.6081 13.339 14.5697 13.9276 13.8634L14.4319 13.2586C14.8499 12.757 14.9601 12.0666 14.7176 11.4603L13.7796 9.11747Z"
               stroke="#FF4CFF" stroke-width="0.88884" stroke-linecap="round" stroke-linejoin="round" />
-          </svg></a>
+          </svg></button>
         <div class="header__burger">
-          <div class="header__burgerIcon">
+          <button class="header__burgerIcon btn-reset">
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -143,6 +143,13 @@
             </div>
           </div>
         </form>
+        <div class="contactUs__checkbox">
+          <input type="checkbox" id="agreement" class="contactUs__checkboxInput" required>
+          <label for="agreement" class="contactUs__checkboxLabel">
+            Обращаясь к нам, вы соглашаетесь с нашими Условиями
+            обслуживания и <a href="#">Политикой конфиденциальности</a>
+          </label>
+        </div>
         <button class="contactUs__btn btn-reset">
           Отправить
         </button>
@@ -154,7 +161,8 @@
   <div class="success">
     <div class="success__wrapp">
       <img src="img/icons/logo.svg" alt="">
-      <svg class="success__cross" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="success__cross" width="26" height="26" viewBox="0 0 26 26" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
         <path
           d="M24.7599 24.7599L12.76 12.76M12.76 12.76L0.76001 0.76001M12.76 12.76L24.76 0.76001M12.76 12.76L0.76001 24.76"
           stroke="white" stroke-width="1.52" stroke-linecap="round" stroke-linejoin="round" />
