@@ -350,33 +350,39 @@
   &__wrapp {
     padding: 40px;
     position: relative;
+
+    @include mobile {
+      padding: 24px 20px;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 16px;
 
-    button {
-      background-color: $pink;
-      width: 100%;
-      font-family: $font-family;
-      font-weight: 700;
-      font-size: 18px;
+  
+  }
+
+  &__btn {
+    background-color: $pink;
+    width: 100%;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 18px;
+    color: $white;
+    padding: 17px 0;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $white;
+      color: $pink;
+    }
+
+    &:active {
+      background-color: #646464;
       color: $white;
-      padding: 17px 0;
-      border-radius: 14px;
-      transition: all 0.3s ease;
-
-      &:hover {
-        background-color: $white;
-        color: $pink;
-      }
-
-      &:active {
-        background-color: #646464;
-        color: $white;
-      }
     }
   }
 
@@ -386,6 +392,7 @@
       font-weight: 500;
       font-size: 36px;
       color: $pink;
+      margin-bottom: 10px;
 
       @include mobile {
         font-size: 26px;
@@ -398,9 +405,10 @@
       font-size: 22px;
       line-height: 150%;
       color: #dfdfdf;
-      margin-bottom: 25px;
+      margin-bottom: 8px;
 
       @include mobile {
+        margin: 0;
         font-weight: 400;
         font-size: 18px;
         line-height: 150%;
@@ -419,22 +427,18 @@
     display: flex;
     gap: 15px;
     justify-content: space-between;
-    margin-bottom: 10px;
 
     @include maxdesktop {
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
   }
 
   &__field {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
 
-    @include maxdesktop {
-      gap: 10px;
-    }
   }
 
   &__label {

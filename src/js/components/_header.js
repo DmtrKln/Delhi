@@ -1,7 +1,9 @@
 const header = document.querySelector('.header');
 const burger = document.querySelector('.header__burger');
+const burgerIcon = document.querySelector('.header__burgerIcon');
 const SCROLLED_CLASS = 'scrolled';
 const mobileMenu = document.querySelector('.header__mobile');
+const mobileLinks = document.querySelectorAll('.header__mobileMenu a');
 
 // скролл
 if (header) {
@@ -12,18 +14,28 @@ if (header) {
 
 // бургер
 burger?.addEventListener('click', () => {
-  burger.classList.toggle('active');
+  burgerIcon?.classList.toggle('active');
   mobileMenu?.classList.toggle('active');
   document.body.classList.toggle('overflow');
 });
 
+// клик по ссылке в мобильном меню
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    burgerIcon?.classList.remove('active');
+    mobileMenu?.classList.remove('active');
+    document.body.classList.remove('overflow');
+  });
+});
+
 // модалка
 const headerBtn = document.querySelector('.header__btn');
-const headerBtnMobile = document.querySelector('.header__tellMobile'); // сверь с HTML!
+const headerBtnMobile = document.querySelector('.header__tellMobile');
 const contactUs = document.querySelector('.contactUs');
 const cross = document.querySelector('.contactUs__cross');
 const contactUsOverlay = document.querySelector('.contactUs__overlay');
 const bidBtn = document.querySelector('.bid__btn');
+const mobileBtn = document.querySelector('.header__mobileBtn')
 
 function openModal() {
   contactUs?.classList.add('active');
@@ -32,6 +44,7 @@ function openModal() {
   if (header) header.style.zIndex = '0';
 }
 
+
 function closeModal() {
   contactUs?.classList.remove('active');
   contactUsOverlay?.classList.remove('active');
@@ -39,7 +52,7 @@ function closeModal() {
   if (header) header.style.zIndex = '';
 }
 
-[headerBtn, headerBtnMobile, bidBtn].forEach(btn => {
+[headerBtn, headerBtnMobile, bidBtn, mobileBtn].forEach(btn => {
   btn?.addEventListener('click', openModal);
 });
 
