@@ -2,7 +2,7 @@
 <html lang="ru" class="page">
 @include('partials/head.html')
 
-<body class="page__body">
+<body class="page__body page__body--notFound">
     <div class="site-container">
         @include('partials/header.html')
 
@@ -11,21 +11,21 @@
                 <div class="container">
                     <div class="notFound__wrapp">
                         <div class="notFound__title">
-                            <h1>4</h1>
+                            <h2>4</h2>
                             <img src="img/icons/404.png" alt="404">
-                            <h1>4</h1>
+                            <h2>4</h2>
                         </div>
                         <div class="notFound__botton">
                             <div class="notFound__desc">
-                                <h2>Страница не найдена</h2>
-                                <p>Эта страница куда-то ушла...
+                                <h3>Страница не найдена</h3>
+                                <p>Эта страница куда-то ушла... <br>
                                     возможно в гости к слонам</p>
                             </div>
-                            <button class="notFound__btn bnt-reset">На главную</button>
+                            <a href="index.html" class="notFound__btn btn-reset">На главную</a>
                         </div>
                     </div>
                 </div>
-            </section>ound
+            </section>
         </main>
 
     </div>
