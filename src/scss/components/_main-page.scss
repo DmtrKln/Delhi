@@ -386,6 +386,70 @@
 
   }
 
+  .reservation__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .reservation__checkboxInput {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+  }
+
+  &__checkboxInput::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    transform: scale(0);
+    transition: transform 0.15s ease;
+    background-color: transparent;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+  &__checkboxInput:checked {
+    background-color: transparent;
+    border-color: #fff;
+  }
+
+  &__checkboxInput:checked::before {
+    transform: scale(1);
+    background-color: #fff;
+  }
+
+  &__checkboxInput:focus-visible {
+    outline-offset: 2px;
+  }
+
+  &__checkboxLabel {
+    color: #fff;
+    user-select: none;
+
+    font-family: $font-family;
+    font-weight: 200;
+    font-size: 14px;
+    color: $white;
+
+    a {
+      font-family: $font-family;
+      font-weight: 200;
+      font-size: 14px;
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
   &__btn {
     border-radius: 15px;
     padding: 11px 85px;
@@ -503,11 +567,27 @@
     background-color: transparent;
     padding: 15px 15px;
     outline: none;
+    height: 44px;
     position: relative;
     font-family: $font-family;
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     font-weight: 400;
     font-size: 16px;
+
+    &::-webkit-datetime-edit {
+      color: #fff;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 16px;
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    &.is-empty::-webkit-datetime-edit {
+      color: rgba(255, 255, 255, 0.5);
+    }
 
     @include mobile {
       padding: 12px 15px;
@@ -533,7 +613,7 @@
   &__input::placeholder {
     font-family: $font-family;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.5);
 
     @include mobile {
@@ -547,8 +627,12 @@
     height: 144px;
     font-family: $font-family;
     font-weight: 400;
-    font-size: 22px;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    color: #fff;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__reviewsTitle {
@@ -602,7 +686,12 @@
 
   &__cardTitle {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
+
+    @include tablet {
+      margin: 0;
+    }
   }
 
   &__cardRight {
@@ -613,9 +702,17 @@
     color: #d4d4d4;
     font-weight: 275;
     font-size: 16px;
-    width: 100%;
 
-    @include small-tablet {
+
+    img {
+      width: 78px;
+
+      @include mobile {
+        width: 92px;
+      }
+    }
+
+    @include tablet {
       flex-direction: column;
     }
   }

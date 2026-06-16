@@ -222,7 +222,7 @@
     flex-direction: column;
     align-items: center;
     gap: 35px;
-    transition: 0.3 all ease;
+    transition: all 0.3s ease;
 
     &.active {
       top: 0;
@@ -316,7 +316,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity .25s, visibility .25s;
-  z-index: 1000;
+  z-index: 100000;
 
   &.active {
     opacity: 1;
@@ -334,18 +334,18 @@
   background: #1a1a1a;
   border: 1px solid $white;
   border-radius: 30px;
-  max-width: 660px;
   max-height: 660px;
   overflow-y: auto;
   max-height: 100vh;
   width: 90%;
+  height: 90%;
   max-width: 660px;
 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  z-index: 9999;
+  z-index: 100001;
 
   &__wrapp {
     padding: 40px;
@@ -361,7 +361,7 @@
     flex-direction: column;
     gap: 16px;
 
-  
+
   }
 
   &__btn {
@@ -401,7 +401,7 @@
 
     p {
       font-family: $font-family;
-      font-weight: 700;
+      font-weight: 400;
       font-size: 22px;
       line-height: 150%;
       color: #dfdfdf;
@@ -452,12 +452,17 @@
     font-family: $font-family;
     font-weight: 400;
     font-size: 18px;
-    color: #6f6f6f;
+    color: #fff;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     padding: 13px 16px;
     box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.1);
     background: #1a1a1a;
+
+    @include mobile {
+      font-size: 16px;
+    }
+
   }
 
   &__input::placeholder {
@@ -465,12 +470,35 @@
     font-weight: 600;
     font-size: 18px;
     color: #bbb;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   textarea {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
     padding: 14px 0 104px 16px;
     height: 140px;
     overflow: hidden;
+
+    @include mobile {
+      font-size: 16px;
+    }
+
+    &::placeholder {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 18px;
+      color: #bbb;
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
   }
 
   &.active {
